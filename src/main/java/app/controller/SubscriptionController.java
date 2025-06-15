@@ -17,7 +17,7 @@ public class SubscriptionController {
 
     private final SubscriptionService subscriptionService;
 
-    @PatchMapping("/setActive/{id}/{activeStatus}")
+    @PatchMapping("/subscriptions/setActive/{id}/{activeStatus}")
     public ResponseEntity<EntityModel<Subscription>> setActive(@PathVariable Long id, @PathVariable Boolean activeStatus) {
         log.info("Поступил запрос на изменение статуса активности. ID: {}, Status: {}", id, activeStatus);
 
