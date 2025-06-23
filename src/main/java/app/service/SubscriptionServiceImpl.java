@@ -18,7 +18,7 @@ public class SubscriptionServiceImpl implements SubscriptionService {
         Subscription subscription = subscriptionRepository.findById(id).orElseThrow(
                 () -> new RuntimeException("Подписка не найдена")
         );
-        subscription.setActive(false);
+        subscription.setActive(activeStatus);
         return subscriptionRepository.save(subscription);
     }
 }
